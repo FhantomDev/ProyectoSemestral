@@ -1,0 +1,29 @@
+/*Menu*/
+.navbar {
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+.principal {
+  height: 200px;
+  background-color: aquamarine;
+  color: black;
+  font-size: 50px;
+}
+
+.usuario {
+  background-color: aqua;
+}
+
+.pie {
+  height: 200px;
+  background-color: rgb(99, 86, 67);
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
