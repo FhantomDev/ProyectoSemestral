@@ -9,6 +9,17 @@
   }
 }
 
+.btn-inicio {
+  float: right;
+}
+
+@media screen and (max-width: 767px) {
+  .btn-inicio {
+    display: none;
+  }
+}
+
+/* Principal */
 .principal {
   height: 200px;
   background-color: aquamarine;
@@ -16,10 +27,7 @@
   font-size: 50px;
 }
 
-.usuario {
-  background-color: aqua;
-}
-
+/* Pie de pagina */
 .pie {
   height: 200px;
   background-color: rgb(99, 86, 67);
