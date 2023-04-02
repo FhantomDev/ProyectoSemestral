@@ -43,14 +43,17 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Sobre Nosotros</a>
           </li>
-          <li class="nav-item position-absolute end-0 me-3">
-            <button class="btn-inicio btn btn-primary" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión o
-              registrase</button>
-          </li>
         </ul>
       </div>
     </div>
+
+    <!--Boton iniciar-->
+    <div class="div-iniciar">
+      <button class="btn-iniciar btn btn-primary" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión o
+        registrase</button>
+    </div>
+
   </nav>
 
   <!--Inicio de sesión-->
@@ -87,23 +90,193 @@
 
   <!-- Carrusel -->
   <section>
-    <div class="pie">
-      Carrusel
+    <div class="d-flex justify-content-center bg-black">
+      <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/oferta1.jpg " class="d-block w-50 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/oferta2.jpg" class="d-block w-50 mx-auto" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/oferta3.jpg" class="d-block w-50 mx-auto" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
   </section>
 
-  <!-- Principal -->
+  <!-- Principal fila-->
   <section>
-    <div class="principal">
-      principal
+    <div class="container-fluid">
+      <div class="row principal1">
+        <!-- Principal fila 1 col 1 -->
+        <div class="col-12 col-md-4 px-0">
+          <h4>Ofertas</h4>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                <a href="#">
+                  <img src="img/Banana.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Banana tree<br>
+                  $21.196
+                </p>
+              </div>
+            </div>
+            <!-- Principal fila 2 col 1 -->
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                <a href="#">
+                  <img src="img/Banana.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Banana tree<br>
+                  $21.196
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Principal fila 1 col 2 -->
+        <div class="col-12 col-md-4 px-0">
+          <h4>Más vendidos</h4>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+            </div>
+            <!-- Pricipal fila 2 col 2 -->
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                <a href="#">
+                  <img src="img/Banana.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Banana tree<br>
+                  $21.196
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Principal fila 1 col 3 -->
+        <div class="col-12 col-md-4 px-0">
+          <h4>Ultimas</h4>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+            </div>
+            <!-- Principal fila 2 col 3 -->
+            <div class="row">
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                <a href="#">
+                  <img src="img/MONSTERA.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Mostera<br>
+                  $87.990
+                </p>
+              </div>
+              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                <a href="#">
+                  <img src="img/Banana.webp" class="img-fluid">
+                </a>
+                <p style="margin-bottom: 0;">Banana tree<br>
+                  $21.196
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
 
   <!--Pie de pagina-->
   <section>
-    <div class="bg-danger pie">
-      Pie de pagina
+    <div class="pie">
+      <a href="https://twitter.com/">
+        <button class="btn btn-outline-secondary">
+          <i class="bi bi-twitter"></i>
+        </button>
+      </a>
+      <a href="https://instagram.com/">
+      <button class="btn btn-outline-secondary">
+        <i class="bi bi-instagram"></i>
+      </button>
+      </a>
+      <a href="https://facebook.com/">
+      <button class="btn btn-outline-secondary">
+        <i class="bi bi-facebook"></i>
+      </button>
+      </a>
+      <a href="https://tiktok.com/">
+      <button class="btn btn-outline-secondary">
+        <i class="bi bi-tiktok"></i>
+      </button>
+      </a>
     </div>
   </section>
   <script src="js/bootstrap.bundle.js"></script>

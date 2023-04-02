@@ -1,6 +1,20 @@
 /*Menu*/
 .navbar {
-  background-color: aliceblue;
+  background-color: #689F38;
+  font-size: 18px;
+}
+
+.nav-link {
+  color: white;
+  padding: 8px;
+}
+
+.navbar .nav-item .active {
+  color: white;
+  font-weight: bold;
+  background-color: #8BC34A;
+  border-radius: 10px;
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -9,29 +23,59 @@
   }
 }
 
-.btn-inicio {
-  float: right;
+/* Boton iniciar */
+@media screen and (max-width: 767px) {
+    .btn-iniciar {
+      background-color: brown;
+    }
+  }
+
+  .div-iniciar {
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .a {
+    text-decoration:none
+  }
+
+/* Principal */
+.principal1 {
+
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+}
+
+.principal2 {
+
+  background-color:darkgoldenrod;
+  color: black;
+  text-align: center;
+}
+
+.principal3 {
+
+  background-color: antiquewhite;
+  color: black;
+  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  .btn-inicio {
-    display: none;
+  .img-fluid {
+    width: 40%;
   }
-}
-
-/* Principal */
-.principal {
-  height: 200px;
-  background-color: aquamarine;
-  color: black;
-  font-size: 50px;
 }
 
 /* Pie de pagina */
 .pie {
   height: 200px;
-  background-color: rgb(99, 86, 67);
-  color: white;
-  font-size: 50px;
+  background-color: #DCEDC8;
+  color: black;
+  font-size: 18px;
+  padding: 15px;
   text-align: center;
 }
