@@ -31,7 +31,6 @@
   }
 
   .div-iniciar {
-    background-color: black;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -42,26 +41,12 @@
   }
 
 /* Principal */
-.principal1 {
+.principal {
 
   background-color: white;
   color: black;
   text-align: center;
   font-size: 18px;
-}
-
-.principal2 {
-
-  background-color:darkgoldenrod;
-  color: black;
-  text-align: center;
-}
-
-.principal3 {
-
-  background-color: antiquewhite;
-  color: black;
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -70,12 +55,31 @@
   }
 }
 
+.div-registro{
+  background-image: url('/img/fondo_registro.png');
+  opacity: 0.5;
+}
+
+.nosotros {
+  background-color: rgba(255, 228, 196, 0.267);
+  font-size: 20px;
+}
+
+.ficha {
+  background-color: rgba(0, 255, 255, 0.112);
+  font-size: 18px;
+}
+
+h4 {
+  background-color: #DCEDC8;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 /* Pie de pagina */
 .pie {
-  height: 200px;
+  height: 150px;
   background-color: #DCEDC8;
   color: black;
   font-size: 18px;
-  padding: 15px;
-  text-align: center;
 }
