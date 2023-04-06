@@ -35,10 +35,10 @@
             <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="productos.html">Productos</a>
+            <a class="nav-link" href="productos.html">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link active" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
@@ -131,42 +131,26 @@
 
   <!-- Principal fila-->
   <section>
-    <div class="container-fluid">
-      <div class="row productos">
-        <h4>Productos</h4>
-        <div class="col-12 col-md-4 my-5 d-flex justify-content-center align-items-center flex-column">
-          <a href="#" class="d-flex justify-content-center">
-            <img src="img/plantas.webp" class="img-fluid px-2 px-md-5 mb-4">
-          </a>
-          <p>Plantas</p>
+    <div class="container-fluid d-flex justify-content-center">
+      <form class="row w-50 py-5 contacto">
+        <div class="col-12 mb-4">
+          <p> 
+            Escribenos ante cualquier duda. Te responderemos en la brevedad.</p>
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail">
         </div>
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-end align-items-center flex-column">
-          <a href="#" class="d-flex justify-content-center">
-            <img src="img/flores.jpg" class="img-fluid px-2 px-md-5 mb-4">
-          </a>
-          <p>Flores</p>
+        <div class="col-12 mb-4">
+          <label for="inputAsunto" class="form-label">Asunto</label>
+          <input type="text" class="form-control" id="inputAsunto">
         </div>
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-end align-items-center flex-column">
-          <a href="#" class="d-flex justify-content-center">
-            <img src="img/semillas.jpg" class="img-fluid px-2 px-md-5 mb-4">
-          </a>
-          <p>Semillas</p>
+        <div class="col-12 mb-4">
+          <label for="inputTexto" class="form-label">Texto</label>
+          <textarea type="text" class="form-control" id="inputTexto"></textarea>
         </div>
-      </div>
-      <div class="row productos">
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-center align-items-center flex-column">
-          <a href="#" class="d-flex justify-content-center">
-            <img src="img/tierra_hoja.jpg" class="img-fluid px-2 px-md-5 mb-4">
-          </a>
-          <p>Tierra de hoja</p>
+        <div class="col-12 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
-        <div class="col-12 col-md-4 mb-5 d-flex justify-content-center align-items-center flex-column">
-          <a href="#" class="d-flex justify-content-center">
-            <img src="img/macetero.webp" class="img-fluid px-2 px-md-5 mb-4">
-          </a>
-          <p>Maceteros</p>
-        </div>
-      </div> 
+      </form>
     </div>
   </section>
 

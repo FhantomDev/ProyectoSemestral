@@ -38,7 +38,7 @@
             <a class="nav-link" href="productos.html">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
@@ -49,11 +49,20 @@
 
     <!--Boton iniciar-->
     <div class="div-iniciar">
-      <button class="btn-iniciar btn btn-primary" type="button" data-bs-toggle="offcanvas"
+      <button class="btn-iniciar btn btn-primary d-none d-md-block" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión
       </button>
+      <button type="button" class="btn btn-primary d-block d-md-none" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <i class="bi bi-person-fill-up"></i>
+      </button>
+    </div>
+    <div class="div2-iniciar">
       <a href="registro.html">
-        <button type="button" class="btn btn-primary">Registrarse</button>
+        <button type="button" class="btn btn-primary d-none d-md-block">Registrarse</button>
+        <button type="button" class="btn btn-primary d-block d-md-none">
+          <i class="bi bi-person-fill-add"></i>
+        </button>
       </a>
     </div>
 
@@ -94,7 +103,7 @@
   <!-- Carrusel -->
   <section>
     <div class="d-flex justify-content-center bg-black">
-      <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/oferta1.jpg " class="d-block w-50 mx-auto" alt="...">

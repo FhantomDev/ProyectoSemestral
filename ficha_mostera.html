@@ -38,7 +38,7 @@
             <a class="nav-link" href="productos.html">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
@@ -49,11 +49,20 @@
 
     <!--Boton iniciar-->
     <div class="div-iniciar">
-      <button class="btn-iniciar btn btn-primary" type="button" data-bs-toggle="offcanvas"
+      <button class="btn-iniciar btn btn-primary d-none d-md-block" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión
       </button>
+      <button type="button" class="btn btn-primary d-block d-md-none" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <i class="bi bi-person-fill-up"></i>
+      </button>
+    </div>
+    <div class="div2-iniciar">
       <a href="registro.html">
-        <button type="button" class="btn btn-primary">Registrarse</button>
+        <button type="button" class="btn btn-primary d-none d-md-block">Registrarse</button>
+        <button type="button" class="btn btn-primary d-block d-md-none">
+          <i class="bi bi-person-fill-add"></i>
+        </button>
       </a>
     </div>
 
@@ -94,7 +103,7 @@
   <!-- Carrusel -->
   <section>
     <div class="d-flex justify-content-center bg-black">
-      <div id="carouselExampleAutoplaying" class="carousel slide w-50" data-bs-ride="carousel">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/oferta1.jpg " class="d-block w-50 mx-auto" alt="...">
@@ -124,12 +133,17 @@
   <section>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-4 my-5 d-flex justify-content-center">
-          <img src="img/MONSTERA.webp" alt="Mostera" class="w-75">
+        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+          <img src="img/MONSTERA.webp" alt="Mostera" class="img-fluid">
         </div>
-        <div class="col-12 col-md-8 my-5 px-2 ficha">
-          <h1>MONSTERA (160 cm)</h1>
-          <p>$87.990</p>
+        <div class="col-12 col-md-7 my-5 px-5 py-5 ficha">
+          <h1 class="mb-5">MONSTERA (160 cm)</h1>
+          <p>La monstera es una planta de interior muy popular debido a su belleza y elegancia natural.
+            Es una planta trepadora que puede alcanzar hasta los 20 metros de altura en su hábitat natural.
+            Sus hojas son grandes y verdes con cortes irregulares que le dan un aspecto exótico y tropical.
+            Podríamos describir la monstera como una planta ornamental que puede ser utilizada para decorar
+            interiores gracias a su belleza y elegancia natural.</p>
+          <p class="mb-5">$87.990</p>
           <button type="submit" class="btn btn-primary">Comprar</button>
         </div>
       </div>
