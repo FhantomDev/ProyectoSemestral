@@ -53,7 +53,7 @@
         data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión
       </button>
       <button type="button" class="btn btn-primary d-block d-md-none" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <i class="bi bi-person-fill-up"></i>
       </button>
     </div>
@@ -132,20 +132,20 @@
   <!-- Principal fila-->
   <section>
     <div class="container-fluid d-flex justify-content-center">
-      <form class="row w-50 py-5 contacto">
+      <!-- Formulario de contacto -->
+      <form action="#" method="post" name="contacto" class="row w-50 py-5 contacto">
         <div class="col-12 mb-4">
-          <p> 
-            Escribenos ante cualquier duda. Te responderemos en la brevedad.</p>
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail">
+          <p>Escribenos ante cualquier duda. Te responderemos en la brevedad.</p>
+          <label for="email" class="form-label">Email</label>
+          <input name="email" type="email" placeholder="Ingrese su e-mail" class="form-control" id="email">
         </div>
         <div class="col-12 mb-4">
-          <label for="inputAsunto" class="form-label">Asunto</label>
-          <input type="text" class="form-control" id="inputAsunto">
+          <label for="asunto" class="form-label">Asunto</label>
+          <input name="asunto" type="text" placeholder="Ingrese el asunto" class="form-control" id="asunto">
         </div>
         <div class="col-12 mb-4">
-          <label for="inputTexto" class="form-label">Texto</label>
-          <textarea type="text" class="form-control" id="inputTexto"></textarea>
+          <label for="areaTexto" class="form-label">Texto</label>
+          <textarea name="areaTexto" type="text" class="form-control" placeholder="Ingrese el texto" id="areaTexto"></textarea>
         </div>
         <div class="col-12 d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Enviar</button>

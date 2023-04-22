@@ -132,44 +132,48 @@
   <!-- Principal fila-->
   <section>
     <div class="container-fluid d-flex justify-content-center div-registro">
-      <form class="row w-50 py-5">
+      <!-- Formulario de registro -->
+      <form action="#" method="post" name="registro" class="row w-50 py-5">
         <div class="col-12 col-md-6 mb-4">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" class="form-control" id="email">
         </div>
         <div class="col-12 col-md-6 mb-4"> 
-          <label for="inputPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="password">
         </div>
         <div class="col-12 col-6 mb-4">
-          <label for="inputNombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="inputNombre">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" name="nombre" class="form-control" id="nombre">
         </div>
         <div class="col-12 col-6 mb-4">
-          <label for="inputApellidos" class="form-label">Apellidos</label>
-          <input type="text" class="form-control" id="inputApellidos">
+          <label for="apellidos" class="form-label">Apellidos</label>
+          <input type="text" name="apellidos" class="form-control" id="apellidos">
         </div>
         <div class="col-12 col-6 mb-4">
-          <label for="inputDireccion" class="form-label">Dirección</label>
-          <input type="text" class="form-control" id="inputDireccion">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" name="direccion" class="form-control" id="direccion">
         </div>
         <div class="col-12 col-6 mb-4">
-          <label for="inputTelefono" class="form-label">Telefono</label>
-          <input type="text" class="form-control" id="inputTelefono">
+          <label for="telefono" class="form-label">Telefono</label>
+          <input type="text" name="telefono" class="form-control" id="telefono">
         </div>
         <div class="col-12 col-md-6 mb-4">
-          <label for="inputCiudad" class="form-label">Ciudad</label>
-          <input type="text" class="form-control" id="inputCiudad">
+          <label for="ciudad" class="form-label">Ciudad</label>
+          <input type="text" name="ciudad" class="form-control" id="ciudad">
         </div>
         <div class="col-12 col-md-6 mb-4">
-          <label for="inputRegion" class="form-label">Región</label>
-          <select id="inputRegion" class="form-select">
+          <label for="regiones" class="form-label">Región</label>
+          <select name="regiones" class="form-select" id="regiones">
             <option selected>Elegir...</option>
-            <option>...</option>
+            <option value="1">Metropolitana</option>
+            <option value="2">Valparaiso</option>
+            <option value="3">Bio Bio</option>
           </select>
         </div>
         <div class="col-12 d-flex justify-content-center">
           <button type="submit" class="btn btn-primary">Registrar</button>
+          <button type="reset" class="btn btn-primary">Limpiar</button>
         </div>
       </form>
     </div>

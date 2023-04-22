@@ -24,17 +24,19 @@
 }
 
 /* Boton iniciar */
-  .div-iniciar {
-    position: absolute;
-    top: 10px;
-    right: 120px;
-  }
-
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .div-iniciar {
       position: absolute;
       top: 10px;
       right: 60px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .div-iniciar {
+      position: absolute;
+      top: 10px;
+      right: 120px;
     }
   }
 
@@ -65,20 +67,50 @@
   text-align: center;
 }
 
-.ficha {
-  border: 10px solid rgba(0, 0, 0, 0.174);
+/* Seccion index */
+.ofertas {
+  background-color: #DCEDC8;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
-.ficha p {
-  font-size: 18px;
+.mas-vendidos {
+  background-color: #DCEDC8;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
-@media screen and (max-width: 767px) {
-  .img-fluid {
-    width: 40%;
+.ultimas {
+  background-color: #DCEDC8;
+  font-size: 22px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 8px;
+}
+
+.link-img:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Imagenes principales */
+@media screen and (max-width: 768px) {
+  .img-principal {
+    width: 50%;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .img-principal {
+    width: 100%;
+  }
+}
+
+/* Registro */
 .div-registro{
   background-image: url('/img/fondo_registro.png');
 }
@@ -88,13 +120,20 @@
   font-weight: bold;
 }
 
+/* Nosotros */
 .nosotros {
   background-color: rgba(255, 228, 196, 0.267);
   font-size: 20px;
 }
 
+/* Ficha planta*/
 .ficha {
   background-color: rgba(0, 255, 255, 0.112);
+  font-size: 18px;
+  border: 10px solid rgba(0, 0, 0, 0.174);
+
+}
+.ficha p {
   font-size: 18px;
 }
 
@@ -104,6 +143,7 @@ h4 {
   padding-bottom: 8px;
 }
 
+/* Pagina Contacto */
 .contacto p {
   font-size: 18px;
   font-weight: bold;
@@ -120,7 +160,6 @@ h4 {
   background-color: rgba(0, 255, 255, 0.144);
   border-color: black;
 }
-
 
 /* Pie de pagina */
 .pie {

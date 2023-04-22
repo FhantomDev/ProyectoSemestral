@@ -53,7 +53,7 @@
         data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Iniciar sesión
       </button>
       <button type="button" class="btn btn-primary d-block d-md-none" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <i class="bi bi-person-fill-up"></i>
       </button>
     </div>
@@ -129,23 +129,31 @@
     </div>
   </section>
 
-  <!-- Principal fila-->
+  <!-- Principal -->
   <section>
     <div class="container-fluid">
-      <div class="row my-4">
-        <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
-          <img src="img/MONSTERA.webp" alt="Mostera" class="img-principal">
-        </div>
-        <div class="col-12 col-md-7 px-5 py-5 ficha">
-          <h1 class="mb-5">MONSTERA (160 cm)</h1>
-          <p>La monstera es una planta de interior muy popular debido a su belleza y elegancia natural.
-            Es una planta trepadora que puede alcanzar hasta los 20 metros de altura en su hábitat natural.
-            Sus hojas son grandes y verdes con cortes irregulares que le dan un aspecto exótico y tropical.
-            Podríamos describir la monstera como una planta ornamental que puede ser utilizada para decorar
-            interiores gracias a su belleza y elegancia natural.</p>
-          <p class="mb-5">$87.990</p>
-          <button type="submit" class="btn btn-primary">Comprar</button>
-        </div>
+      <div class="row">
+          <nav class="bg-info py-4">
+            <div class="col-12 col-md-12 nav nav-tabs bg-info" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Cuenta</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Perfil</button>
+              <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Pedidos</button>
+              <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button>
+            </div>
+          </nav>
+
+          <div class="col-12 col-md-12 bg-info-subtle py-4 tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+              <h2>Hola Fulanito</h2>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+              <h2>Editar perfil</h2>
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+              <h2>Pedidos</h2>
+            </div>
+            <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">...</div>
+          </div>
       </div>
     </div>
   </section>
