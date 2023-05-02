@@ -133,7 +133,7 @@
   <section>
     <div class="container-fluid d-flex justify-content-center">
       <!-- Formulario de contacto -->
-      <form action="#" method="post" name="contacto" class="row w-50 py-5 contacto">
+      <form novalidate action="#" method="post" name="contacto" id="form-contacto" class="row w-50 py-5 contacto">
         <div class="col-12 mb-4">
           <p>Escribenos ante cualquier duda. Te responderemos en la brevedad.</p>
           <label for="email" class="form-label">Email</label>
@@ -147,8 +147,9 @@
           <label for="areaTexto" class="form-label">Texto</label>
           <textarea name="areaTexto" type="text" class="form-control" placeholder="Ingrese el texto" id="areaTexto"></textarea>
         </div>
+        <div class="col-12 d-flex justify-content-center" id="alerta"></div>
         <div class="col-12 d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-primary" id="btnContacto">Enviar</button>
         </div>
       </form>
     </div>
@@ -182,6 +183,7 @@
     </div>
   </section>
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 
 </html>
