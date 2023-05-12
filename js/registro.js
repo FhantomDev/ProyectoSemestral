@@ -1,17 +1,22 @@
 
+//Obtener los campos
+
 var email = document.getElementById("email");
 var pass = document.getElementById("password");
 var nombre = document.getElementById("nombre");
 var apellidos = document.getElementById("apellidos");
 var direccion = document.getElementById("direccion");
 var telefono = document.getElementById("telefono");
-var ciudad = document.getElementById("ciudad");
+var comuna = document.getElementById("comunas");
+var provincia = document.getElementById("provincias");
 var region = document.getElementById("regiones");
 
 var formRegistro = document.getElementById("form-registro");
 var alerta = document.getElementById("alerta");
 
-email.addEventListener("blur", function () {
+//Marcar casillas
+
+/* email.addEventListener("blur", function () {
   if (email.value.length < 6) {
     email.style.border = "2px solid red";
   } else {
@@ -59,21 +64,31 @@ telefono.addEventListener("blur", function () {
   }
 })
 
-ciudad.addEventListener("blur", function () {
-  if (ciudad.value.length < 6) {
-    ciudad.style.border = "2px solid red";
+comuna.addEventListener("blur", function () {
+  if (comuna.options[comuna.selectedIndex].text === "Seleccione una opción") {
+    comuna.style.border = "2px solid red";
   } else {
-    ciudad.style.border = "2px solid green";
+    comuna.style.border = "2px solid green";
+  }
+})
+
+provincia.addEventListener("blur", function () {
+  if (provincia.options[provincia.selectedIndex].text === "Seleccione una opción") {
+    provincia.style.border = "2px solid red";
+  } else {
+    provincia.style.border = "2px solid green";
   }
 })
 
 region.addEventListener("blur", function () {
-  if (region.value == "Elegir...") {
+  if (region.value < 1) {
     region.style.border = "2px solid red";
   } else {
     region.style.border = "2px solid green";
   }
-})
+}) */
+
+//Validar formulario
 
 formRegistro.addEventListener("submit", function (evento) {
   var validarForm = true;
@@ -85,31 +100,59 @@ formRegistro.addEventListener("submit", function (evento) {
   var validarDireccion = /^(?=.*\d)(?=.*\s)[\w\s,.#-]{5,}$/;
   var validarTelefono = /^[1-9]\d{8}$/;
 
-  console.log(email.value);
-
   if (!validarEmail.test(email.value)) {
     validarForm = false;
+    email.style.border = "2px solid red";
+  } else{
+    email.style.border = "2px solid green";
   }
   if (!validarPass.test(pass.value)) {
     validarForm = false;
+    pass.style.border = "2px solid red";
+  } else{
+    pass.style.border = "2px solid green";
   }
   if (!validarNombre.test(nombre.value)) {
     validarForm = false;
+    nombre.style.border = "2px solid red";
+  } else{
+    nombre.style.border = "2px solid green";
   }
   if (!validarApellidos.test(apellidos.value)) {
     validarForm = false;
+    apellidos.style.border = "2px solid red";
+  } else{
+    apellidos.style.border = "2px solid green";
   }
   if (!validarDireccion.test(direccion.value)) {
     validarForm = false;
+    direccion.style.border = "2px solid red";
+  } else{
+    direccion.style.border = "2px solid green";
   }
   if (!validarTelefono.test(telefono.value)) {
     validarForm = false;
+    telefono.style.border = "2px solid red";
+  } else{
+    telefono.style.border = "2px solid green";
   }
-  if (ciudad.value.length < 6) {
+  if (comuna.options[comuna.selectedIndex].text === "Seleccione una opción") {
     validarForm = false;
+    comuna.style.border = "2px solid red";
+  } else{
+    comuna.style.border = "2px solid green";
   }
-  if (region.value == "Elegir...") {
+  if (provincia.options[provincia.selectedIndex].text === "Seleccione una opción") {
     validarForm = false;
+    provincia.style.border = "2px solid red";
+  } else{
+    provincia.style.border = "2px solid green";
+  }
+  if (region.options[region.selectedIndex].text === "Seleccione una opción") {
+    validarForm = false;
+    region.style.border = "2px solid red";
+  } else{
+    region.style.border = "2px solid green";
   }
 
   if (validarForm == false) {
@@ -122,6 +165,9 @@ formRegistro.addEventListener("submit", function (evento) {
     alerta.style.textAlign = "center";
     alerta.style.height = "50px"
     alerta.style.lineHeight = "50px";
+    console.log(provincia.value);
+    console.log(region.value);
+
   } else {
     evento.preventDefault();
     alerta.innerText = "Exito " + email.value;
