@@ -1,2 +1,2 @@
 # ProyectoSemestral
-Proyecto semestral de programación web con html, bootstrap y css
+Proyecto semestral de programación web con html, css, bootstrap y JavaScript
