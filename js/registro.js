@@ -14,80 +14,6 @@ var region = document.getElementById("regiones");
 var formRegistro = document.getElementById("form-registro");
 var alerta = document.getElementById("alerta");
 
-//Marcar casillas
-
-/* email.addEventListener("blur", function () {
-  if (email.value.length < 6) {
-    email.style.border = "2px solid red";
-  } else {
-    email.style.border = "2px solid green";
-  }
-})
-
-pass.addEventListener("blur", function () {
-  if (pass.value.length < 6) {
-    pass.style.border = "2px solid red";
-  } else {
-    pass.style.border = "2px solid green";
-  }
-})
-
-nombre.addEventListener("blur", function () {
-  if (nombre.value.length < 6) {
-    nombre.style.border = "2px solid red";
-  } else {
-    nombre.style.border = "2px solid green";
-  }
-})
-
-apellidos.addEventListener("blur", function () {
-  if (apellidos.value.length < 6) {
-    apellidos.style.border = "2px solid red";
-  } else {
-    apellidos.style.border = "2px solid green";
-  }
-})
-
-direccion.addEventListener("blur", function () {
-  if (direccion.value.length < 6) {
-    direccion.style.border = "2px solid red";
-  } else {
-    direccion.style.border = "2px solid green";
-  }
-})
-
-telefono.addEventListener("blur", function () {
-  if (telefono.value.length < 6) {
-    telefono.style.border = "2px solid red";
-  } else {
-    telefono.style.border = "2px solid green";
-  }
-})
-
-comuna.addEventListener("blur", function () {
-  if (comuna.options[comuna.selectedIndex].text === "Seleccione una opción") {
-    comuna.style.border = "2px solid red";
-  } else {
-    comuna.style.border = "2px solid green";
-  }
-})
-
-provincia.addEventListener("blur", function () {
-  if (provincia.options[provincia.selectedIndex].text === "Seleccione una opción") {
-    provincia.style.border = "2px solid red";
-  } else {
-    provincia.style.border = "2px solid green";
-  }
-})
-
-region.addEventListener("blur", function () {
-  if (region.value < 1) {
-    region.style.border = "2px solid red";
-  } else {
-    region.style.border = "2px solid green";
-  }
-}) */
-
 //Validar formulario
 
 formRegistro.addEventListener("submit", function (evento) {
@@ -163,16 +89,13 @@ formRegistro.addEventListener("submit", function (evento) {
     alerta.style.fontSize = "20px";
     alerta.style.fontWeight = "bold";
     alerta.style.textAlign = "center";
-    alerta.style.height = "50px"
-    alerta.style.lineHeight = "50px";
-    console.log(provincia.value);
-    console.log(region.value);
+    alerta.style.height = "80px";
 
   } else {
     evento.preventDefault();
-    alerta.innerText = "Exito " + email.value;
+    alerta.innerText = "Exito ";
     alerta.style.border = "2px solid green";
-    alerta.style.backgroundColor = "lightcoral";
+    alerta.style.backgroundColor = "palegreen";
     alerta.style.fontSize = "20px";
     alerta.style.fontWeight = "bold";
     alerta.style.textAlign = "center";

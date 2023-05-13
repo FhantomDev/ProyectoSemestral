@@ -72,18 +72,19 @@
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
     aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inicie sesión o registrese</h5>
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inicie sesión</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body bg-info">
-      <form action="#">
+      <!-- Formulario de inicio de sesion -->
+      <form novalidate action="#" method="post" name="login" id="login">
         <div class="mb-4">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" name="email">
+          <input type="email" class="form-control" name="email" id="email-login">
         </div>
         <div class="mb-4">
           <label for="password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" name="password">
+          <input type="password" class="form-control" name="password" id="password-login">
         </div>
         <div class="mb-4 form-check">
           <input type="checkbox" name="conectado" class="form-check-input">
@@ -92,6 +93,7 @@
         <div class="d-grid mb-4">
           <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </div>
+        <div class="col-12 d-flex justify-content-center align-items-center" id="alerta-login"></div>
         <div class="mb-4 text-center">
           <span><a href="#">Registrar</a></span><br>
           <span><a href="#">Recuperar contraseña</a></span>
@@ -137,18 +139,18 @@
         <div class="col-12 mb-4">
           <p>Escribenos ante cualquier duda. Te responderemos en la brevedad.</p>
           <label for="email" class="form-label">Email</label>
-          <input name="email" type="email" placeholder="Ingrese su e-mail" class="form-control" id="email">
+          <input name="email" type="email" placeholder="email@dominio.com" class="form-control" id="email">
         </div>
         <div class="col-12 mb-4">
           <label for="asunto" class="form-label">Asunto</label>
-          <input name="asunto" type="text" placeholder="Ingrese el asunto" class="form-control" id="asunto">
+          <input name="asunto" type="text" placeholder="Ingrese un asunto de minimo 4 caracteres" class="form-control" id="asunto">
         </div>
         <div class="col-12 mb-4">
           <label for="areaTexto" class="form-label">Texto</label>
-          <textarea name="areaTexto" type="text" class="form-control" placeholder="Ingrese el texto" id="areaTexto"></textarea>
+          <textarea name="areaTexto" type="text" class="form-control" placeholder="Ingrese un texto de minimo 10 caracteres" id="areaTexto"></textarea>
         </div>
         <div class="col-12 d-flex justify-content-center" id="alerta"></div>
-        <div class="col-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center py-3">
           <button type="submit" class="btn btn-primary" id="btnContacto">Enviar</button>
         </div>
       </form>
@@ -192,6 +194,7 @@
   </footer>
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/contacto.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

@@ -77,14 +77,14 @@
     </div>
     <div class="offcanvas-body bg-info">
       <!-- Formulario de inicio de sesion -->
-      <form action="#" method="post" name="inicioSesion">
+      <form novalidate action="#" method="post" name="login" id="login">
         <div class="mb-4">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" name="email">
+          <input type="email" class="form-control" name="email" id="email-login">
         </div>
         <div class="mb-4">
           <label for="password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" name="password">
+          <input type="password" class="form-control" name="password" id="password-login">
         </div>
         <div class="mb-4 form-check">
           <input type="checkbox" name="conectado" class="form-check-input">
@@ -93,6 +93,7 @@
         <div class="d-grid mb-4">
           <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </div>
+        <div class="col-12 d-flex justify-content-center align-items-center" id="alerta-login"></div>
         <div class="mb-4 text-center">
           <span><a href="#">Registrar</a></span><br>
           <span><a href="#">Recuperar contraseña</a></span>
@@ -132,142 +133,156 @@
 
   <!-- Principal fila-->
   <section>
-    <div class="container-fluid">
-      <div class="row principal">
-        <!-- Principal fila 1 col 1 -->
-        <div class="col-12 col-md-4 px-0">
-          <div class="col-12 col-md-12 ofertas">Ofertas</div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/Banana.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Banana tree<br>
-                  $21.196
-                </p>
-              </div>
-            </div>
-            <!-- Principal fila 2 col 1 -->
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/Banana.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Banana tree<br>
-                  $21.196
-                </p>
-              </div>
-            </div>
-          </div>
+    <!-- Tiempo -->
+    <div class="container-fluid clima d-flex justify-content-center">
+      <div class="row w-50 py-3">
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+          <div id="temperatura"></div>
         </div>
-        <!-- Principal fila 1 col 2 -->
-        <div class="col-12 col-md-4 px-0">
-          <div class="col-12 col-md-12 mas-vendidos">Más vendidos</div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-            </div>
-            <!-- Pricipal fila 2 col 2 -->
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/Banana.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Banana tree<br>
-                  $21.196
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+          <div id="descripcion"></div>
         </div>
-        <!-- Principal fila 1 col 3 -->
-        <div class="col-12 col-md-4 px-0">
-          <div class="col-12 col-md-12 ultimas">Últimas unidades</div>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-            </div>
-            <!-- Principal fila 2 col 3 -->
-            <div class="row">
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/MONSTERA.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Mostera<br>
-                  $87.990
-                </p>
-              </div>
-              <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
-                <a href="ficha_mostera.html" class="link-img">
-                  <img src="img/Banana.webp" class="img-principal">
-                </a>
-                <p style="margin-bottom: 0;">Banana tree<br>
-                  $21.196
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+          <div id="humedad"></div>
         </div>
-        <a href="productos.html">
-          <p style="font-size: 20px; font-weight: bold;">Más Productos</p>
-        </a>
       </div>
-    </div>
+    </div>    
+      <div class="container-fluid">
+        <div class="row principal">
+          <!-- Principal fila 1 col 1 -->
+          <div class="col-12 col-md-4 px-0">
+            <div class="col-12 col-md-12 ofertas">Ofertas</div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/Banana.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Banana tree<br>
+                    $21.196
+                  </p>
+                </div>
+              </div>
+              <!-- Principal fila 2 col 1 -->
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/Banana.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Banana tree<br>
+                    $21.196
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Principal fila 1 col 2 -->
+          <div class="col-12 col-md-4 px-0">
+            <div class="col-12 col-md-12 mas-vendidos">Más vendidos</div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+              </div>
+              <!-- Pricipal fila 2 col 2 -->
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/Banana.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Banana tree<br>
+                    $21.196
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Principal fila 1 col 3 -->
+          <div class="col-12 col-md-4 px-0">
+            <div class="col-12 col-md-12 ultimas">Últimas unidades</div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+              </div>
+              <!-- Principal fila 2 col 3 -->
+              <div class="row">
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-items-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/MONSTERA.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Mostera<br>
+                    $87.990
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 py-4 px-4 d-flex justify-content-center align-content-center flex-column">
+                  <a href="ficha_mostera.html" class="link-img">
+                    <img src="img/Banana.webp" class="img-principal">
+                  </a>
+                  <p style="margin-bottom: 0;">Banana tree<br>
+                    $21.196
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="productos.html">
+            <p style="font-size: 20px; font-weight: bold;">Más Productos</p>
+          </a>
+        </div>
+      </div>
   </section>
 
   <!--Pie de pagina-->
@@ -306,6 +321,8 @@
     </div>
   </footer>
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/api_clima.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

@@ -72,18 +72,19 @@
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
     aria-labelledby="offcanvasWithBothOptionsLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inicie sesión o registrese</h5>
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inicie sesión</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body bg-info">
-      <form action="#">
+      <!-- Formulario de inicio de sesion -->
+      <form novalidate action="#" method="post" name="login" id="login">
         <div class="mb-4">
           <label for="email" class="form-label">E-mail</label>
-          <input type="email" class="form-control" name="email">
+          <input type="email" class="form-control" name="email" id="email-login">
         </div>
         <div class="mb-4">
           <label for="password" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" name="password">
+          <input type="password" class="form-control" name="password" id="password-login">
         </div>
         <div class="mb-4 form-check">
           <input type="checkbox" name="conectado" class="form-check-input">
@@ -92,6 +93,7 @@
         <div class="d-grid mb-4">
           <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </div>
+        <div class="col-12 d-flex justify-content-center align-items-center" id="alerta-login"></div>
         <div class="mb-4 text-center">
           <span><a href="#">Registrar</a></span><br>
           <span><a href="#">Recuperar contraseña</a></span>
@@ -99,7 +101,6 @@
       </form>
     </div>
   </div>
-
   <!-- Carrusel -->
   <section>
     <div class="d-flex justify-content-center bg-black">
@@ -202,6 +203,7 @@
     </div>
   </footer>
   <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

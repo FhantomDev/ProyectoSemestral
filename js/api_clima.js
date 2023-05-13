@@ -6,8 +6,6 @@ window.addEventListener('load', () => {
     let descripcion = document.getElementById('descripcion')
     let lugar = document.getElementById('lugar')
     let humedad = document.getElementById('humedad')
-    let pais = document.getElementById('pais')
-    let verIcono = document.getElementById('icono')
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(ubicacion => {
@@ -20,17 +18,11 @@ window.addEventListener('load', () => {
                 .then(response => { return response.json() })
                 .then(datos => {
 
-                    console.log(datos)
-                    temperatura.textContent = 'Temp. ' + datos.main.temp + ' °C'
-                    let desc = datos.weather[0].description
-                    descripcion.textContent = desc.toUpperCase()
-                    lugar.textContent = datos.name
-                    humedad.textContent = `Humedad ${datos.main.humidity} %`
-                    pais.textContent = datos.sys.country
-                    let icono = datos.weather[0].icon
-                    const urlIcono = `https://openweathermap.org/img/wn/${icono}.png`
-                    verIcono.src= urlIcono
-
+                    //console.log(datos)
+                    console.log(datos.main.humidity)
+                    temperatura.innerHTML = 'Temp. ' + datos.main.temp + ' °C'
+                    descripcion.innerHTML = datos.weather[0].description
+                    humedad.innerHTML = 'Humedad ' +datos.main.humidity+ '%'
                 })
                 .catch(error => {
                     console.log(error)

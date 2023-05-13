@@ -35,9 +35,9 @@ formContacto.addEventListener("submit", function (evento) {
         alerta.style.lineHeight = "50px";
     } else {
         evento.preventDefault();
-        alerta.innerText = "Exito " + email.value;
+        alerta.innerText = "Exito ";
         alerta.style.border = "2px solid green";
-        alerta.style.backgroundColor = "lightcoral";
+        alerta.style.backgroundColor = "palegreen";
         alerta.style.fontSize = "20px";
         alerta.style.fontWeight = "bold";
         alerta.style.textAlign = "center";
